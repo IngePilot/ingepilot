@@ -1,0 +1,236 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #172c50;
+    background: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    background: white;
+    box-shadow: 0 2px 12px #00000010;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #173765;
+}
+
+.logo span, h2 span {
+    color: #f07816;
+}
+
+nav a {
+    text-decoration: none;
+    color: #173765;
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f07816;
+}
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    background: linear-gradient(120deg, #10284d, #244b78);
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.subtitle {
+    color: #ff9238;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 54px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #ff8a28;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 28px;
+    background: #f07816;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #d96108;
+}
+
+.intro, .services {
+    text-align: center;
+    padding: 65px 8%;
+}
+
+.intro h2, .services h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.8;
+    color: #657187;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.card {
+    padding: 35px;
+    text-align: left;
+    border: 1px solid #e5eaf0;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px #10284d15;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #173765;
+}
+
+.card p {
+    color: #657187;
+    line-height: 1.7;
+}
+
+footer {
+    text-align: center;
+    padding: 35px;
+    background: #10284d;
+    color: white;
+    line-height: 2;
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 7px;
+        display: inline-block;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos services | IngéPilot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header>
+    <div class="logo">Ingé<span>Pilot</span></div>
+    <nav>
+        <a href="/">Accueil</a>
+        <a href="/services">Nos services</a>
+        <a href="/realisations">Réalisations</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<section class="intro">
+    <h2>Nos domaines d'<span>expertise</span></h2>
+    <p>Des solutions techniques et digitales adaptées à vos projets.</p>
+</section>
+
+<section class="services">
+    <div class="cards">
+
+        <div class="card">
+            <h3>⚡ Simulation électrique</h3>
+            <p>Études et simulations de circuits électriques et électroniques avec Proteus ISIS, MATLAB et Simulink.</p>
+        </div>
+
+        <div class="card">
+            <h3>⚙️ Conception mécanique</h3>
+            <p>Conception 3D, modélisation de pièces, assemblages et réalisation de plans techniques avec CATIA.</p>
+        </div>
+
+        <div class="card">
+            <h3>🎓 Accompagnement TIPE</h3>
+            <p>Accompagnement des élèves CPGE dans le choix, l'étude, la réalisation et la présentation de leurs projets TIPE.</p>
+        </div>
+
+        <div class="card">
+            <h3>📑 Rapports et présentations</h3>
+            <p>Rédaction, structuration et mise en forme de rapports techniques, dossiers et présentations professionnelles.</p>
+        </div>
+
+        <div class="card">
+            <h3>📊 Tableaux de bord</h3>
+            <p>Création de dashboards pour le suivi des indicateurs, l'analyse des données et l'aide à la décision.</p>
+        </div>
+
+        <div class="card">
+            <h3>💻 Développement digital</h3>
+            <p>Développement de sites web, applications de gestion et outils numériques personnalisés.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <h3>IngéPilot</h3>
+    <p>PLANIFIER • CONCEVOIR • RÉALISER • SUIVRE</p>
+    <p>© 2026 IngéPilot - Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
